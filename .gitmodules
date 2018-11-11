@@ -1,0 +1,7 @@
+[submodule "phoenix-tool-client"]
+	path = phoenix-tool-client
+	url = https://rkolosovs@bitbucket.org/mbitsphoenixteam/phoenix-tool-client.git
+	branch = hard_restart
+[submodule "phoenix-tool-server"]
+	path = phoenix-tool-server
+	url = https://rkolosovs@bitbucket.org/mbitsphoenixteam/phoenix-tool-server.git

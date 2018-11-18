@@ -20,4 +20,4 @@ services:
       - client
       - server
     command: >
-        sh -c "npm run test"
+        sh -c "ls -a -l ./src && npm run test"

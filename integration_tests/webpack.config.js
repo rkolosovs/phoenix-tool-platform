@@ -1,21 +1,16 @@
 const path = require("path");
 module.exports = {
-  entry: ["./src/app.tsx"],
+  entry: ["./src/test.ts"],
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "bundle.js"
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js"]
+    extensions: [".ts", ".js"]
   },
   devtool: "inline-source-map",
   module: {
     rules: [
-      {
-        test: /\.tsx?$/,
-        use: "ts-loader",
-        exclude: /node_modules/
-      }
     ]
   }
 };

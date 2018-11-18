@@ -1,0 +1,13 @@
+.dockerignore
+.gitignore
+Dockerfile
+README.md
+LICENSE
+package-lock.json
+
+node_modules
+build
+src/*.js
+src/*/*.js
+src/*.js.map
+src/*/*.js.map

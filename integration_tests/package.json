@@ -1,7 +1,7 @@
 {
-  "name": "phoenix_tool_client",
+  "name": "phoenix_tool_integration_tests",
   "version": "0.0.1",
-  "description": "Client frontend for the Phoenix Tool.",
+  "description": "Integration test for the Phoenixtool.",
   "main": "bundle.js",
   "scripts": {
     "test": "qunit",
@@ -9,11 +9,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://rkolosovs@bitbucket.org/mbitsphoenixteam/phoenix-tool-client.git"
+    "url": "git+https://rkolosovs@bitbucket.org/mbitsphoenixteam/phoenix-tool-platform.git"
   },
   "author": "Roberts Kolosovs",
   "license": "SEE LICENSE IN LICENSE",
-  "homepage": "https://bitbucket.org/mbitsphoenixteam/phoenix-tool-client#readme",
+  "homepage": "https://bitbucket.org/mbitsphoenixteam/phoenix-tool-platform#readme",
   "dependencies": {
     "react": "^16.4.1",
     "react-dom": "^16.4.1",

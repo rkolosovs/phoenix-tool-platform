@@ -20,4 +20,4 @@ module("Test module", function () {
     test("My first test", function (t: any) {
         t.strictEqual(2+2, 4, "2+2 should be 4");
     });
-}
+});

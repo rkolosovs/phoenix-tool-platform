@@ -1,11 +1,11 @@
 FROM node:latest
 
 WORKDIR /tmp
-COPY package.json /tmp/
-COPY webpack.config.js /tmp/
+COPY integration_tests/package.json /tmp/
+COPY integration_tests/webpack.config.js /tmp/
 RUN npm install
 
-COPY src /tmp/src
-COPY config /tmp/config
-COPY tsconfig.json /tmp/
-COPY test /tmp/test
+COPY integration_tests/src /tmp/src
+COPY integration_tests/config /tmp/config
+COPY integration_tests/tsconfig.json /tmp/
+RUN tsc

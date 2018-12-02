@@ -8,4 +8,5 @@ RUN npm install
 COPY integration_tests/src /tmp/src
 COPY integration_tests/config /tmp/config
 COPY integration_tests/tsconfig.json /tmp/
-RUN tsc
+RUN npm run tsc
+RUN ls -a -l

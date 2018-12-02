@@ -20,4 +20,4 @@ services:
       - client
       - server
     command: >
-        sh -c "ls -a -l ./src && npm run test"
+        sh -c "pwd && ls -a -l && npm run test ./*"

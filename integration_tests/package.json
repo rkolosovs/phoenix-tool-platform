@@ -5,7 +5,8 @@
   "main": "bundle.js",
   "scripts": {
     "test": "qunit",
-    "build": "webpack"
+    "build": "webpack",
+    "tsc": "tsc"
   },
   "repository": {
     "type": "git",

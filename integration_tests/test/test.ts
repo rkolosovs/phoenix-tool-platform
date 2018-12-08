@@ -15,22 +15,18 @@ You should have received a copy of the GNU General Public License
 along with Phoenixclient.  If not, see <http://www.gnu.org/licenses/>.*/
 
 import {test, module} from "../node_modules/qunit";
-
-import {Realm} from "../../phoenix-tool-client/src/model/realm";
-import {FootArmy} from "../../phoenix-tool-client/src/model/armies/footArmy";
-import {FieldType} from "../../phoenix-tool-client/src/model/map/field";
+import {loadCurrentTurn} from "../../phoenix-tool-client/src/serverInteraction/loadingFunctions";
+import {TurnStatus} from "../../phoenix-tool-client/src/gameState/gameState";
 
 module("Test module", function () {
-    test("My first test", function (t: any) {
-        t.strictEqual(2+2, 4, "2+2 should be 4");
-    });
-    test("footArmyConstructor", function (t: any) {
-        const usa = new Realm(
-            "Unabhängige Stämme Assimilans",
-            "usa", "000,000,000",
-            FieldType.DESERT,
-            true);
-        const footArmy = new FootArmy(111, usa, 1000, 1, 0, 0, 0, [0, 0], 0, 0, false);
-        t.strictEqual(footArmy.canHaveCatapults(), true, "non guard armies can have catapults.");
+    test("currentTurnLoading", async function (t: any) {
+        let actualResult = loadCurrentTurn();
+        let expectedResult = {
+            turn: 1,
+            realm: 'sl',
+            status: TurnStatus.STARTED
+        };
+        t.strictEqual(await actualResult, expectedResult, "should get current turn.");
+        t.async()
     });
 });

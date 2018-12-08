@@ -12,6 +12,10 @@ services:
        dockerfile: Dockerfile
     ports:
       - "8000:8000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/healthcheck"]
+      interval: 1s
+      timeout: 30s
   tests:
     build:
       context: .

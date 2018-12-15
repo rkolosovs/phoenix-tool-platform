@@ -13,7 +13,7 @@ services:
     ports:
       - "8000:8000"
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000/healthcheck"]
+      test: ["CMD", "curl", "-f", "http://localhost:8000/databaseLink/healthcheck"]
       interval: 1s
       timeout: 30s
   tests:
@@ -23,5 +23,4 @@ services:
     depends_on:
       - client
       - server
-    command: >
-        sh -c "npm run test"
+    command: ["npm", "run", "test"]

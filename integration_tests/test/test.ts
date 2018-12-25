@@ -20,21 +20,15 @@ import {TurnStatus} from "../../phoenix-tool-client/src/gameState/gameState";
 
 module("Test module", function () {
     test("currentTurnLoading", async function (t: any) {
-        config.testTimeout = 1000;
-        t.async();
+        config.testTimeout = 10000;
+        let done = t.async();
         let actualResultPromise = loadCurrentTurn();
         let expectedResult = {
+            status: TurnStatus.STARTED,
             turn: 1,
-            realm: null,
-            status: TurnStatus.STARTED
+            realm: null
         };
-        t.strictEqual(await actualResultPromise, expectedResult, "should get current turn.");
-        // actualResultPromise.then((actualResult) => {
-        //         t.strictEqual(actualResult, expectedResult, "should get current turn.");
-        //     }
-        // ).catch((error) => {
-        //         console.error("Promise rejected: ", error);
-        //     }
-        // );
+        t.deepEqual(await actualResultPromise, expectedResult, "should get current turn.");
+        done();
     });
 });

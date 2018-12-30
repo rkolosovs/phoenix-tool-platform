@@ -172,8 +172,8 @@ module("Test module", function () {
             {
                 type: "move",
                 content: {
-                    armyId: 101,
-                    realm: 'pnk',
+                    armyId: 301,
+                    realm: 'rot',
                     fromX: 42,
                     fromY: 42,
                     toX: 43,
@@ -186,11 +186,11 @@ module("Test module", function () {
                 content: {
                     participants: [
                         {
-                            armyId: 101,
-                            realm: 'pnk'
+                            armyId: 301,
+                            realm: 'rot'
                         },
                         {
-                            armyId: 101,
+                            armyId: 301,
                             realm: 'grn'
                         }
                     ],
@@ -202,9 +202,9 @@ module("Test module", function () {
             {
                 type: "merge",
                 content: {
-                    realm: 'pnk',
-                    fromArmy: 102,
-                    toArmy: 101,
+                    realm: 'rot',
+                    fromArmy: 301,
+                    toArmy: 301,
                     x: 42,
                     y: 42
                 },
@@ -213,9 +213,9 @@ module("Test module", function () {
             {
                 type: "transfer",
                 content: {
-                    realm: 'pnk',
-                    fromArmy: 101,
-                    toArmy: 102,
+                    realm: 'rot',
+                    fromArmy: 301,
+                    toArmy: 301,
                     armyFromType: 1,
                     armyToType: 1,
                     troops: 200,
@@ -231,8 +231,8 @@ module("Test module", function () {
             {
                 type: "split",
                 content: {
-                    realm: 'pnk',
-                    fromArmy: 101,
+                    realm: 'rot',
+                    fromArmy: 301,
                     newArmy: 102,
                     troops: 1000,
                     leaders: 1,
@@ -247,8 +247,8 @@ module("Test module", function () {
             {
                 type: "mount",
                 content: {
-                    realm: 'pnk',
-                    fromArmy: 101,
+                    realm: 'rot',
+                    fromArmy: 301,
                     newArmy: 201,
                     troops: 1000,
                     leaders: 1,
@@ -260,8 +260,8 @@ module("Test module", function () {
             {
                 type: "shoot",
                 content: {
-                    armyId: 1,
-                    realm: 'pnk',
+                    armyId: 301,
+                    realm: 'rot',
                     LKPcount: 1,
                     SKPcount: 1,
                     toX: 0,
@@ -274,7 +274,7 @@ module("Test module", function () {
             }
         ];
         let actualResult = await actualResultPromise;
-        t.deepEqual(actualResult, expectedResult, "should have an event in the right format.");
+        t.deepEqual(actualResult, expectedResult, "should fetch the right events.");
         done();
     });
 });

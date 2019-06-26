@@ -13,3 +13,7 @@ The icons and graphics used in this program are licensed under the [CC BY-NC-SA 
 ## DESCRIPTION
 
 This is an umbrela repository for the Phoenix Tool consisting of the Client and the Server Applications. Besides the constituent parts of the overall tool this repository contains the integration tests.
+
+## CONTRIBUTION POLICY
+
+This project is run for the benefit of the Erkenfara community and with its specific technical and functional requirements in mind. Please refrain from issuing pull requests to this project if you are not part of it. Just fork the project and develop it independantly of this project (as permitted by the license) if you find some worth while in this repository and wish to contribute. And feel free to give me a note if you build something cool based on this.
